@@ -1,0 +1,19 @@
+# Make sure that Java v8+ is installed:
+java -version
+ 
+# Install Nextflow
+curl -fsSL get.nextflow.io | bash
+ 
+# Add Nextflow binary to your user's PATH:
+mv nextflow ~/bin/
+# OR system-wide installation:
+# sudo mv nextflow /usr/local/bin
+
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+
+conda create --name env_nf nextflow
+conda activate env_nf
+
+conda install nextflow
